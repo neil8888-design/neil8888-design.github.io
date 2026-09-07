@@ -3,44 +3,151 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#13263f">
-  <title>企業民刑法專題｜考古題解答</title>
-  <meta name="description" content="企業民刑法專題九題：三段論考題解答、法律概念與法條依據。">
+  <meta name="theme-color" content="#162238">
+  <title>企業民刑法專題｜九題刷題</title>
+  <meta name="description" content="企業民刑法專題九題，支援隨機出題、錯題重練及顯示或隱藏答案。">
   <style>
-    :root{--navy:#13263f;--navy2:#203956;--orange:#e96f3b;--gold:#f3b43f;--paper:#f5f1e8;--card:#fffdfa;--ink:#16263b;--muted:#627087;--line:#dfe3e8;--green:#227a5a;--shadow:0 14px 36px rgba(25,39,57,.10)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-size:16px;line-height:1.75}
-    button,select{font:inherit}.topline{height:8px;background:linear-gradient(90deg,var(--navy) 0 62%,var(--orange) 62% 82%,var(--gold) 82%)}
-    header{position:sticky;top:0;z-index:20;background:rgba(255,253,250,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .head{max-width:1220px;margin:auto;padding:16px 24px;display:flex;align-items:center;gap:16px}.mark{width:52px;height:52px;border-radius:17px;background:var(--navy);color:white;display:grid;place-items:center;font-weight:900;font-size:20px;box-shadow:0 7px 16px rgba(19,38,63,.18)}
-    .brand small{display:block;color:var(--orange);font-weight:800;letter-spacing:.16em}.brand h1{margin:0;font-size:clamp(1.25rem,3vw,1.75rem);line-height:1.25}.count{margin-left:auto;color:var(--muted);font-weight:700;white-space:nowrap}
-    .mobile-picker{display:none;padding:12px 18px;background:var(--paper);border-bottom:1px solid var(--line)}.mobile-picker select{width:100%;padding:13px 16px;border:1px solid #cfd5dc;border-radius:14px;background:white;color:var(--ink);font-weight:700}
-    .layout{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:286px minmax(0,1fr);gap:28px;padding:28px 24px 64px}.sidebar{position:sticky;top:101px;align-self:start;background:var(--navy);border-radius:24px;padding:22px 16px;color:white;box-shadow:var(--shadow)}
-    .sidebar h2{font-size:.92rem;letter-spacing:.12em;color:#b7c3d3;margin:0 10px 14px}.qnav{display:grid;gap:7px}.qnav button{border:0;text-align:left;color:#d9e1eb;background:transparent;border-radius:13px;padding:10px 12px;cursor:pointer;line-height:1.35}.qnav button:hover{background:rgba(255,255,255,.08)}.qnav button.active{background:white;color:var(--navy);font-weight:800}.qnav .num{display:block;font-size:.76rem;color:var(--orange);font-weight:900;margin-bottom:3px}.qnav button.active .num{color:var(--orange)}
-    main{min-width:0}.question-head{background:var(--navy);color:white;border-radius:26px;padding:clamp(22px,4vw,38px);box-shadow:var(--shadow);position:relative;overflow:hidden}.question-head:after{content:"§";position:absolute;right:24px;bottom:-46px;font:900 150px Georgia;color:rgba(255,255,255,.055)}
-    .eyebrow{color:var(--gold);font-weight:900;letter-spacing:.13em;font-size:.84rem}.question-head h2{font-size:clamp(1.55rem,4vw,2.3rem);line-height:1.35;margin:8px 0 20px;max-width:720px}.prompt{position:relative;margin:0;background:rgba(255,255,255,.09);border-left:4px solid var(--gold);border-radius:4px 16px 16px 4px;padding:18px 20px;color:#f1f4f8}
-    .jumpbar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.jumpbar a{text-decoration:none;color:var(--navy);background:white;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:800;box-shadow:0 3px 9px rgba(30,45,64,.05)}
-    .section{scroll-margin-top:120px;background:var(--card);border:1px solid rgba(210,216,222,.8);border-radius:22px;padding:clamp(20px,4vw,34px);margin-top:18px;box-shadow:var(--shadow)}.section-title{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-size:1.28rem}.section-title .icon{width:34px;height:34px;border-radius:11px;background:#fff0e9;color:var(--orange);display:grid;place-items:center;font-weight:900}
-    .answer-list{display:grid;gap:10px}.line{margin:0;padding:3px 0}.line.issue{margin-top:15px;font-size:1.08rem;font-weight:900;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:8px}.line.direct{background:#edf8f3;border-left:4px solid var(--green);border-radius:4px 13px 13px 4px;padding:13px 16px;font-weight:800;color:#175a43}.line.major{color:var(--navy);font-weight:800}.line.minor{color:#34485f}.line.conclusion{background:#fff8e8;border-radius:13px;padding:12px 16px;font-weight:800}
-    .flow{display:grid;gap:9px}.flow-step{border-left:4px solid var(--orange);background:#f7f8fa;border-radius:4px 14px 14px 4px;padding:13px 16px}.flow-step strong{display:block;color:var(--navy);font-size:.9rem}.concept{padding:13px 0;border-bottom:1px solid var(--line)}.concept:last-child{border:0}.lawbox{background:var(--navy2);color:white;border-radius:16px;padding:18px 20px;font-weight:700}
-    .pager{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.pager button{min-height:48px;border:1px solid #cfd5dc;background:white;color:var(--navy);font-weight:800;border-radius:14px;padding:11px 18px;cursor:pointer}.pager button:disabled{opacity:.35;cursor:default}
-    footer{text-align:center;color:var(--muted);padding:10px 20px 38px;font-size:.9rem}
-    @media(max-width:820px){.head{padding:13px 16px}.mark{width:46px;height:46px;border-radius:14px}.brand small{font-size:.72rem}.count{display:none}.mobile-picker{display:block}.layout{display:block;padding:18px 14px 48px}.sidebar{display:none}.question-head{border-radius:20px}.question-head h2{font-size:1.5rem}.section{border-radius:18px}.jumpbar{position:sticky;top:128px;z-index:12;background:rgba(245,241,232,.94);padding:10px 0;margin:8px 0;backdrop-filter:blur(8px)}.jumpbar a{font-size:.88rem;padding:7px 12px}.pager button{flex:1;padding:10px}.prompt{padding:15px 16px}}
+    :root{--ink:#162238;--accent:#d65a31;--paper:#f7f4ed;--white:#ffffff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.75}
+    button,select{font:inherit;color:inherit}
+    button{cursor:pointer}
+    header{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--white);padding:max(12px,env(safe-area-inset-top)) 16px 12px}
+    .head{max-width:760px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{font-size:1.1rem;margin:0}.tag{color:var(--accent);font-weight:900;font-size:.85rem}
+    .wrap{max-width:760px;margin:auto;padding:18px 14px calc(38px + env(safe-area-inset-bottom))}
+    .tools{display:grid;grid-template-columns:1fr auto auto;gap:8px;margin-bottom:14px}
+    select,.btn{min-height:46px;border:2px solid var(--ink);border-radius:12px;background:var(--white);padding:9px 12px;font-weight:800}
+    .btn:active{background:var(--paper)}
+    .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--white)}
+    .btn.marked{background:var(--ink);color:var(--white)}
+    .card{background:var(--white);border:2px solid var(--ink);border-radius:18px;padding:20px;margin-bottom:14px}
+    .kicker{margin:0 0 4px;color:var(--accent);font-weight:900;font-size:.86rem}
+    h2{font-size:clamp(1.35rem,5vw,1.8rem);line-height:1.35;margin:0 0 16px}
+    .prompt{white-space:pre-wrap;font-weight:700}
+    .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+    .answer{display:none}.answer.open{display:block}
+    .answer h3,.concepts h3{font-size:1.15rem;margin:0 0 12px}
+    .answer-line{margin:0 0 12px;white-space:pre-wrap}
+    .answer-line.heading{font-weight:900;color:var(--accent);margin-top:20px;border-bottom:2px solid var(--paper);padding-bottom:5px}
+    .answer-line.step{font-weight:900;margin-bottom:4px}
+    .law-ref{color:var(--accent);font-weight:900}
+    .concepts{margin-top:22px;padding-top:18px;border-top:2px solid var(--paper)}
+    .concept{margin:0 0 10px;white-space:pre-wrap}
+    .lawbox{background:var(--ink);color:var(--white);border-radius:12px;padding:13px 15px;margin-top:16px;font-weight:800}
+    .lawbox .law-ref{color:var(--accent)}
+    .nav{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .note{text-align:center;font-size:.82rem;font-weight:700;margin:12px 0 0}
+    [hidden]{display:none!important}
+    @media(max-width:560px){.tools{grid-template-columns:1fr 1fr}.tools select{grid-column:1/-1}.card{padding:18px 16px}.actions{grid-template-columns:1fr}.head .tag{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
-  <div class="topline"></div>
-  <header><div class="head"><div class="mark">法</div><div class="brand"><small>LEGAL STUDY</small><h1>企業民刑法專題</h1></div><div class="count">共 9 題</div></div><div class="mobile-picker"><select id="picker" aria-label="選擇題目"></select></div></header>
-  <div class="layout"><aside class="sidebar"><h2>題目導覽</h2><nav class="qnav" id="qnav"></nav></aside><main id="main"></main></div>
-  <footer>企業民刑法專題｜三段論精煉版</footer>
-  <script>const QUESTIONS = [{"title": "第一題｜應有部分出售與優先承買權", "prompt": "甲、乙、丙分別共有A地，應有部分各三分之一：（一）甲欲將其應有部分移轉給丁時，乙、丙有無優先承買權？（二）若甲、丁已完成買賣及所有權移轉，其效力與救濟如何？", "answer": ["（一）乙、丙的優先承買權", "答案：甲如將應有部分出賣給丁，乙、丙得主張優先承買；贈與等非買賣移轉則不得主張。", "1. 大前提（法律／原理原則）：土地法第34條之1第4項規定，共有人出賣其應有部分時，他共有人得以同一價格共同或單獨優先承購。其前提是買賣條件已確定。", "2. 小前提（事實）：甲擬將A地三分之一應有部分移轉給共有關係外的丁。若方式為買賣，且價格及條件已確定，即符合規定；若為贈與，則不符合「出賣」。", "3. 結論（法律效果）：乙或丙得向甲，以甲、丁間的同一價格及條件，主張優先承買甲的三分之一應有部分；非買賣移轉則無此權利。", "（二）買賣、物權移轉及救濟", "答案：甲、丁間的買賣及完成登記的移轉均有效；乙、丙不得請求塗銷，但受有損害時得向甲求償。", "1. 大前提（法律／原理原則）：民法第819條第1項准許共有人自由處分其應有部分；不動產物權依民法第758條須以書面為之並完成登記。土地法第34條之1第4項的優先承買權僅具債權效力。", "2. 小前提（事實）：甲處分的是自己的三分之一應有部分，且甲、丁已成立買賣並完成所有權移轉登記。", "3. 結論（法律效果）：丁取得該應有部分。乙、丙不得向丁主張買賣或登記無效；甲妨礙其優先承買並致生損害時，乙、丙得向甲依民法第184條第2項請求損害賠償。"], "concepts": ["應有部分：是共有人對共有物的抽象比例，不是土地上的特定位置；共有人得自由處分自己的應有部分。", "債權效力：違反優先承買權不使第三人已取得的物權當然失效，原則上以損害賠償處理。"], "law": "法條依據：土地法第34條之1第4項；民法第184條第2項、第758條、第819條第1項。"}, {"title": "第二題｜出售給共有人與多數決處分", "prompt": "甲、乙、丙分別共有A地，應有部分各三分之一：（一）甲將其應有部分移轉給丙時，乙有無優先承買權？（二）甲、乙以多數決將A地出賣給戊時，丙有無優先承買權？", "answer": ["（一）甲移轉給丙", "答案：乙不得主張優先承買權。", "1. 大前提（法律／原理原則）：土地法第34條之1第4項旨在避免外部第三人進入共有關係並簡化共有；應有部分出賣給原共有人時，其他共有人無優先承買權。非買賣移轉亦不適用。", "2. 小前提（事實）：丙原為A地共有人；甲將其應有部分移轉給丙，並未引進外部第三人。", "3. 結論（法律效果）：乙不得向甲主張優先承買權。", "（二）甲、乙多數決出售A地", "答案：甲、乙得依多數決出售A地；丙得優先承買甲、乙合計三分之二的應有部分。", "1. 大前提（法律／原理原則）：土地法第34條之1第1項規定，共有人過半數且其應有部分合計過半數者，得處分共有土地；第2項要求事先書面通知他共有人；第4項保障他共有人優先承買。", "2. 小前提（事實）：甲、乙占三人中的二人，應有部分合計三分之二，均超過二分之一；戊是外部第三人，丙是未同意的共有人。", "3. 結論（法律效果）：甲、乙得出賣A地，但應事先書面通知丙。丙得向甲、乙，以同一價格及條件優先承買其合計三分之二的應有部分；承買後，丙取得A地全部所有權。"], "concepts": ["特別規定：土地法第34條之1是民法第819條第2項全體同意原則的例外。", "承買範圍：丙已有三分之一，不必購買自己的部分；其承買標的是甲、乙的三分之二。"], "law": "法條依據：土地法第34條之1第1項、第2項、第4項；民法第819條第2項。"}, {"title": "第三題｜多數共有人出賣共有土地全部", "prompt": "甲、乙、丙分別共有A地，應有部分各三分之一。甲、乙將A地全部出賣並移轉給丁，買賣契約及物權移轉效力如何？", "answer": ["（一）買賣契約", "答案：甲、乙與丁間的買賣契約有效。", "1. 大前提（法律／原理原則）：買賣是負擔行為，不以出賣人具有完整處分權為成立要件；依民法第348條，出賣人負交付並移轉所有權的義務。", "2. 小前提（事實）：甲、乙雖僅有合計三分之二的應有部分，仍與丁約定出售A地全部。", "3. 結論（法律效果）：買賣契約有效，丁得向甲、乙請求依約給付；但契約不拘束非當事人的丙。甲、乙不能完成給付時，應負債務不履行責任。", "（二）所有權移轉", "答案：甲、乙符合土地法的多數決門檻並依法完成程序及登記時，A地全部的所有權移轉有效。", "1. 大前提（法律／原理原則）：民法第819條第2項原則上要求共有物的處分須經全體同意；但土地法第34條之1第1項規定，共有人過半數且其應有部分合計過半數者，得處分共有土地全部。處分人並應依同條第2項事先書面通知他共有人，並依第3項處理其應得對價。不動產所有權移轉另須依民法第758條以書面為之並完成登記。", "2. 小前提（事實）：甲、乙占三名共有人中的二人，應有部分合計三分之二，人數與應有部分均超過二分之一，符合多數決門檻。", "3. 結論（法律效果）：甲、乙如已依法通知丙、使丙受領價金或為其提存，並與丁以書面作成物權意思表示及完成登記，A地全部的所有權移轉有效，丁取得A地所有權。若未符合土地法第34條之1的要件，即不得以多數決處分丙的應有部分。"], "concepts": ["負擔行為：只發生給付義務，不直接移轉既有權利，因此原則上不以處分權為必要。", "不動產物權行為：須有物權意思表示、書面、處分權及登記。土地法第34條之1使符合門檻的多數共有人取得處分共有土地全部的法定權限。", "少數共有人保障：丙得依土地法第34條之1第4項，以同一價格及條件優先承買甲、乙的應有部分。"], "law": "法條依據：土地法第34條之1第1項至第4項；民法第348條、第758條、第819條。"}, {"title": "第四題｜設定抵押權與部分共有人自行分割", "prompt": "甲、乙、丙分別共有A地，應有部分各三分之一：（一）甲、乙以A地全部為丁設定抵押權，其效力如何？（二）甲、乙自行分割A地，其效力如何？", "answer": ["（一）以A地全部設定抵押權", "答案：未經丙同意，甲、乙不得以A地全部設定抵押權；就丙權利所為的設定效力未定。", "1. 大前提（法律／原理原則）：民法第819條第2項規定，共有物設定負擔須全體共有人同意。土地法第34條之1第1項列舉的多數決事項不包含抵押權。無權處分依民法第118條第1項效力未定。", "2. 小前提（事實）：甲、乙未取得丙同意，卻以A地全部為丁設定抵押權。", "3. 結論（法律效果）：丙承認時，無權處分部分原則上溯及生效；丙拒絕承認時，該部分確定不生效。如已登記，丙得向丁依民法第767條第1項中段、第821條請求塗銷妨害共有權的登記。若僅以甲、乙自己的應有部分設定抵押，則屬有效。", "（二）甲、乙自行分割", "答案：甲、乙不能排除丙而有效協議分割A地。", "1. 大前提（法律／原理原則）：民法第824條第1項的分割協議須由全體共有人就分割方法達成合意；協議分割是不動產處分行為，並須依民法第758條以書面辦理登記。土地法第34條之1的多數決不適用共有物分割。", "2. 小前提（事實）：甲、乙雖占人數及應有部分多數，但丙未參與、未同意。", "3. 結論（法律效果）：甲、乙間就A地全部所作分割協議不拘束丙，亦不能有效完成協議分割。若違法辦理登記，丙得向登記名義人依民法第767條第1項中段請求塗銷；協議不成時，甲或乙得依民法第823條、第824條訴請裁判分割。"], "concepts": ["設定抵押權：使所有權受限制，屬物權處分行為。", "分割的兩階段：分割協議是負擔行為；辦理交付或登記的協議分割是處分行為。"], "law": "法條依據：土地法第34條之1；民法第118條、第758條、第767條、第819條、第823條、第824條。"}, {"title": "第五題｜全體共有人協議分割土地", "prompt": "甲、乙、丙分別共有A地，應有部分各三分之一。三人欲透過協議分割A地，應如何為之？", "answer": ["（一）訂立分割協議", "答案：甲、乙、丙應共同約定分割方法。", "1. 大前提（法律／原理原則）：依民法第824條第1項，共有物依共有人協議的方法分割；分割協議屬負擔行為，使共有人負有依約完成分割的義務。", "2. 小前提（事實）：甲、乙、丙均同意以協議方式分割A地。", "3. 結論（法律效果）：三人應共同約定各自分得的位置、面積及金錢補償等事項；協議成立後，彼此得請求履行。", "（二）完成協議分割", "答案：三人須以書面作成物權意思表示並完成分割登記，始發生物權效力。", "1. 大前提（法律／原理原則）：協議分割會消滅共有關係，屬處分行為。不動產物權變動依民法第758條須有物權意思表示、書面、處分權及登記。依民法第824條之1，共有人自分割效力發生時取得分得部分所有權。", "2. 小前提（事實）：A地是不動產，甲、乙、丙均為共有人並已同意依協議分割。", "3. 結論（法律效果）：三人完成分割登記後，共有關係消滅，各自取得分得土地的單獨所有權。一人拒絕配合時，他共有人得依分割協議請求其協同登記。"], "concepts": ["先協議、後登記：分割協議只產生履行義務；登記後才完成不動產協議分割。"], "law": "法條依據：民法第758條、第824條第1項、第824條之1第1項。"}, {"title": "第六題｜分割協議與十五年消滅時效", "prompt": "甲、乙、丙分別共有A地，應有部分各三分之一。三人於民國80年簽訂分割協議，於民國96年應如何主張？", "answer": ["（一）請求履行分割協議", "答案：甲仍得請求履行，但乙、丙得提出十五年消滅時效抗辯而拒絕。", "1. 大前提（法律／原理原則）：分割協議的履行請求權是債權請求權，依民法第125條原則上十五年不行使而消滅時效完成；依民法第144條，債務人須提出時效抗辯，始得拒絕給付。", "2. 小前提（事實）：自民國80年至96年已逾十五年；題目未見時效中斷或不完成事由。", "3. 結論（法律效果）：甲得向乙、丙請求協同辦理分割登記，但乙、丙得主張時效完成而拒絕。請求權本身不消滅，惟甲不能再強制履行。", "（二）改請求裁判分割", "答案：乙、丙拒絕履行後，甲仍得訴請法院裁判分割。", "1. 大前提（法律／原理原則）：共有物分割請求權不因分割協議履行請求權罹於時效而消滅。依民法第823條第1項、第824條第2項，協議履行請求權時效完成並經共有人拒絕履行時，任何共有人得請求法院分割。", "2. 小前提（事實）：乙、丙已得以時效抗辯拒絕履行民國80年的分割協議。", "3. 結論（法律效果）：甲得以乙、丙為被告，提起共有物分割訴訟，請求法院重新決定分割方法。"], "concepts": ["時效效果：消滅時效完成不使請求權自動消滅；債務人取得拒絕履行的抗辯權。", "時間法提示：民國98年修法將既有實務見解明文化；本題在民國96年仍可依當時實務處理。"], "law": "法條依據：民法第125條、第144條、第823條、第824條。"}, {"title": "第七題｜公同共有物遭第三人無權占有", "prompt": "甲、乙、丙公同共有A地，A地為丁無權占有。甲得否請求丁返還A地？", "answer": ["答案：甲得單獨起訴丁，但只能請求丁將A地返還給甲、乙、丙全體。", "1. 大前提（法律／原理原則）：民法第767條第1項賦予所有人對無權占有人之返還請求權。民法第828條第2項準用第821條，使公同共有人得就共有物全部對第三人行使所有權請求權；回復共有物時，只能為全體利益請求。", "2. 小前提（事實）：丁無權占有甲、乙、丙公同共有的A地；甲是公同共有人之一。", "3. 結論（法律效果）：甲得向丁依民法第767條第1項、第828條第2項準用第821條，請求返還A地；但請求內容應為返還給甲、乙、丙全體，不得只返還給甲。"], "concepts": ["公同共有：各公同共有人並無可自由處分的應有部分，而是基於公同關係共同享有權利。", "單獨起訴：現行民法第828條第2項已有明文準用第821條，修法前的爭議已獲解決。"], "law": "法條依據：民法第767條第1項、第821條、第828條第2項。"}, {"title": "第八題｜買賣不破租賃", "prompt": "甲將A屋出租給乙並交付占有，嗣後將A屋所有權移轉給丙。丙得否請求乙返還A屋？", "answer": ["（一）原則", "答案：丙不得請求乙返還A屋。", "1. 大前提（法律／原理原則）：民法第767條第1項的返還請求，以相對人無權占有為要件。依民法第425條第1項，租賃物交付後、承租人占有中，所有權雖移轉，租約對受讓人仍繼續存在。", "2. 小前提（事實）：甲先將A屋出租並交付乙，之後才將所有權移轉給丙；乙於移轉時仍占有A屋。", "3. 結論（法律效果）：租約對丙繼續存在，丙承受出租人地位；乙有權占有，丙不得向乙依民法第767條第1項請求返還。", "（二）例外", "答案：租約未經公證且期限逾五年或未定期限時，丙可能請求返還。", "1. 大前提（法律／原理原則）：民法第425條第2項規定，未經公證的不動產租約，其期限逾五年或未定期限者，不適用買賣不破租賃。", "2. 小前提（事實）：題目未交代租期及公證情形，不能逕認符合例外。", "3. 結論（法律效果）：本題原則上丙不得請求返還；如另證明租約未經公證且期限逾五年或未定期限，租約不能對抗丙，丙始得依民法第767條第1項請求乙返還。"], "concepts": ["法定契約承擔：民法第425條使受讓人依法承受出租人地位，是契約相對性原則的例外。", "不動產移轉：題目稱所有權已移轉，即以民法第758條所要求的書面與登記均已完成為前提。"], "law": "法條依據：民法第425條、第758條、第767條第1項。"}, {"title": "第九題｜共有土地之使用收益與返還請求", "prompt": "甲有A地一筆，並將右半部特定範圍無償借給乙使用。乙在該處經營停車場。其後甲將A地出賣並移轉給丙、丁，各取得二分之一應有部分。丙未經丁同意，又占用左半部經營停車場。丁分別請求乙、丙將各自占有部分返還給自己。丁的主張有無理由？", "answer": ["（一）丁對乙之返還請求", "答案：丁原則上得請求乙返還右半部，但只能請求返還給丙、丁全體；請求返還給丁自己並無理由。", "1. 大前提（法律／原理原則）：依民法第767條第1項前段，所有人得向無權占有人請求返還所有物；依第821條，各共有人得就共有物全部對第三人行使所有權請求權，但回復共有物時，只能為全體共有人利益為之。使用借貸依民法第464條只具債權效力，原則上不能拘束契約以外的土地受讓人。", "2. 小前提（事實）：甲與乙成立A地右半部的使用借貸後，才將A地移轉給丙、丁。丁不是使用借貸契約當事人，乙原則上不能以該契約對抗丁。", "3. 結論（法律效果）：乙對丁原則上屬無權占有。丁得向乙依民法第767條第1項前段、第821條請求返還；但應請求返還給丙、丁全體，不能請求返還給丁自己。", "（二）使用借貸能否類推買賣不破租賃", "答案：依否定說，使用借貸不得類推民法第425條；本題採此說，乙不能對抗丁。", "1. 大前提（法律／原理原則）：民法第425條使租賃契約對受讓人繼續存在，是契約相對性的例外。是否擴及無償使用借貸，學說有爭議：肯定說重視既存占有外觀與借用人的信賴；否定說認為債權物權化應從嚴，租賃有償、使用借貸無償，保護程度不同。", "2. 小前提（事實）：乙是無償借用人，不是承租人；法律並未明文使使用借貸對受讓人繼續存在。", "3. 結論（法律效果）：依課堂筆記及擬答採取的否定說，乙不得類推適用民法第425條。但丁如明顯違反誠信原則或以損害乙為主要目的，其返還請求仍可能受民法第148條限制。", "（三）丁對丙之返還請求", "答案：丁得請求丙返還左半部給丙、丁全體，但不能請求返還給丁自己。", "1. 大前提（法律／原理原則）：依民法第818條，共有人得按其應有部分對共有物全部使用收益；但應有部分是抽象比例，不等於共有物上的特定位置。排他使用特定部分，須有分管契約或依民法第820條作成合法管理決定。無合法權源而排除他共有人使用者，他共有人得依民法第767條、第821條為全體利益請求返還。", "2. 小前提（事實）：丙雖有二分之一應有部分，但未與丁成立分管契約，也未取得丁同意，即排他占用A地左半部。丙一人僅占二名共有人中的一人，應有部分也僅為二分之一，均未達第820條第1項的過半數門檻。", "3. 結論（法律效果）：丙不得將二分之一應有部分直接對應為A地左半部並排他使用。丁得請求丙返還左半部，但只能請求返還給丙、丁全體，不能請求返還給丁自己。"], "concepts": ["1. 使用借貸與租賃不同：使用借貸是無償契約；租賃是有償契約。民法第425條只明定租賃物所有權移轉後，租約對受讓人繼續存在。使用借貸能否類推適用，仍有肯定說與否定說之爭。", "2. 應有部分不是土地上的特定位置：丙取得二分之一應有部分，是對A地全部享有二分之一比例的權利，不代表丙取得左半部的單獨所有權。未經合法分管或管理決定，不得排除丁而獨占特定部分。", "3. 丁得起訴，但不能要求返還給自己：丁雖得單獨行使共有物返還請求權，回復共有物仍須為全體共有人利益。故丁正確的請求方式，是要求乙、丙返還給丙、丁全體，而不是交由丁個人占有。", "總結：乙與丙的占有原則上均欠缺對抗丁的合法權源，丁得分別請求返還；但丁只能請求返還給全體共有人。因此，丁要求返還給自己的主張並無理由，改為返還給丙、丁全體後始有理由。"], "law": "法條依據：民法第148條、第425條、第464條、第767條第1項、第818條、第820條及第821條。"}];
-  const main=document.getElementById('main'),nav=document.getElementById('qnav'),picker=document.getElementById('picker');let current=0;
-  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const cls=s=>s.startsWith('答案：')?'direct':/^\d+\. 大前提/.test(s)?'major':/^\d+\. 小前提/.test(s)?'minor':/^\d+\. 結論/.test(s)?'conclusion':/^（[一二三四五六七八九十]+）/.test(s)?'issue':'';
-  function shortTitle(t){return t.replace(/^第[一二三四五六七八九十]+題｜/,'')}
-  QUESTIONS.forEach((q,i)=>{const b=document.createElement('button');b.innerHTML=`<span class="num">第 ${i+1} 題</span>${esc(shortTitle(q.title))}`;b.onclick=()=>show(i);nav.appendChild(b);const o=document.createElement('option');o.value=i;o.textContent=`第 ${i+1} 題｜${shortTitle(q.title)}`;picker.appendChild(o)});picker.onchange=e=>show(Number(e.target.value));
-  function flowHtml(lines){let issues=[],cur=null;for(const s of lines){if(/^（[一二三四五六七八九十]+）/.test(s)){cur={name:s,answer:''};issues.push(cur)}else if(s.startsWith('答案：')){if(!cur){cur={name:'核心爭點',answer:''};issues.push(cur)}cur.answer=s.replace('答案：','')}}return issues.map((x,i)=>`<div class="flow-step"><strong>${i+1}. ${esc(x.name)}</strong>${esc(x.answer)}</div>`).join('')}
-  function show(i){current=i;const q=QUESTIONS[i];[...nav.children].forEach((b,n)=>b.classList.toggle('active',n===i));picker.value=i;main.innerHTML=`<section class="question-head"><div class="eyebrow">第 ${i+1} 題／共 ${QUESTIONS.length} 題</div><h2>${esc(shortTitle(q.title))}</h2><p class="prompt">${esc(q.prompt)}</p></section><nav class="jumpbar" aria-label="本題內容"><a href="#answer">考題答案</a><a href="#structure">解題結構</a><a href="#concepts">法律概念</a><a href="#laws">法條依據</a></nav><section class="section" id="answer"><h3 class="section-title"><span class="icon">答</span>考題答案</h3><div class="answer-list">${q.answer.map(s=>`<p class="line ${cls(s)}">${esc(s)}</p>`).join('')}</div></section><section class="section" id="structure"><h3 class="section-title"><span class="icon">析</span>解題結構</h3><div class="flow">${flowHtml(q.answer)}</div></section><section class="section" id="concepts"><h3 class="section-title"><span class="icon">念</span>法律概念</h3>${q.concepts.map(s=>`<div class="concept">${esc(s)}</div>`).join('')}</section><section class="section" id="laws"><h3 class="section-title"><span class="icon">法</span>法條依據</h3><div class="lawbox">${esc(q.law.replace('法條依據：',''))}</div></section><div class="pager"><button id="prev" ${i===0?'disabled':''}>← 上一題</button><button id="next" ${i===QUESTIONS.length-1?'disabled':''}>下一題 →</button></div>`;document.getElementById('prev').onclick=()=>show(i-1);document.getElementById('next').onclick=()=>show(i+1);window.scrollTo({top:0,behavior:'smooth'})}
-  show(0);
+  <header><div class="head"><h1>企業民刑法專題｜九題刷題</h1><span class="tag">手機版</span></div></header>
+  <main class="wrap">
+    <section class="tools" aria-label="出題工具">
+      <select id="picker" aria-label="選擇題目"></select>
+      <button class="btn" id="random" type="button">隨機出題</button>
+      <button class="btn" id="wrongMode" type="button">錯題重練</button>
+    </section>
+    <article class="card">
+      <p class="kicker" id="number"></p>
+      <h2 id="title"></h2>
+      <div class="prompt" id="prompt"></div>
+      <div class="actions">
+        <button class="btn primary" id="toggle" type="button" aria-expanded="false">顯示答案</button>
+        <button class="btn" id="markWrong" type="button">加入錯題</button>
+      </div>
+    </article>
+    <section class="card answer" id="answer" aria-live="polite">
+      <h3>考題答案</h3>
+      <div id="answerBody"></div>
+      <div class="concepts" id="conceptSection">
+        <h3>法律概念解說</h3>
+        <div id="conceptBody"></div>
+        <div class="lawbox" id="law"></div>
+      </div>
+    </section>
+    <nav class="nav" aria-label="切換題目">
+      <button class="btn" id="prev" type="button">上一題</button>
+      <button class="btn" id="next" type="button">下一題</button>
+    </nav>
+    <p class="note" id="modeNote">一般練習</p>
+  </main>
+  <script>
+    const QUESTIONS=[{"title":"第一題｜應有部分出售與優先承買權","shortTitle":"應有部分出售與優先承買權","prompt":[".甲乙丙分別共有A地，應有部分各為三分之一，試問","(一) 甲欲將其應有部分移轉與丁時，乙或丙得否主張其優先購買權? (二)若甲已與丁為系爭應有部分之買賣契約與物權移轉行為，其效力如何?乙與丙有何救濟管道?"],"answers":[{"text":"（一）乙、丙的優先承買權","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"土地法第34條之1第4項：共有人出賣其應有部分時，他共有人得以同一價格共同或單獨優先承購。此優先承買權以有償買賣為限。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲、乙、丙為A地共有人，甲擬將三分之一應有部分移轉予外部第三人丁。若移轉原因為買賣且價格、條件已確定，屬出賣；若為贈與等非買賣行為，則不屬之。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲如以買賣方式出賣應有部分予丁，且價格、條件已確定，即符合第34條之1第4項要件；如為贈與，則欠缺出賣要件。\n法律效果：乙、丙均得以同一價格及條件，共同或單獨向甲主張優先承買；要件不具備時，無優先承買權。","style":"Normal"},{"text":"（二）買賣、物權移轉及救濟","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第819條第1項：各共有人得自由處分其應有部分。民法第758條：不動產物權移轉，應以書面為之並經登記，始生效力。土地法第34條之1第4項的優先承買權僅具債權效力，違反時不當然影響第三人取得物權的效力。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲對自己三分之一應有部分有處分權，並已與丁成立買賣契約及完成所有權移轉登記。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲有處分權，物權移轉以書面為之並完成登記，符合第819條第1項及第758條要件。\n法律效果：買賣契約及物權移轉均有效，丁取得該應有部分；乙、丙不得向丁主張買賣或登記無效。甲如故意或過失違反保護優先承買權人的規定，並致乙、丙受有損害，乙、丙始得依民法第184條第2項請求損害賠償。","style":"Normal"}],"concepts":["應有部分：是共有人對共有物的抽象比例，不是土地上的特定位置；共有人得自由處分自己的應有部分。","債權效力：違反優先承買權不使第三人已取得的物權當然失效，原則上以損害賠償處理。"],"law":"法條依據：土地法第34條之1第4項；民法第184條第2項、第758條、第819條第1項。"},{"title":"第二題｜出售給共有人與多數決處分","shortTitle":"出售給共有人與多數決處分","prompt":["甲乙丙分別共有A地，應有部分各三分之一，試問","(一)若甲將其應有部分移轉與丙時，乙得否主張其有優先承買權? (二)若甲乙以多數決之方式，將A地移轉與戊，丙得否主張優先承買權?"],"answers":[{"text":"（一）甲移轉給丙","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"土地法第34條之1第4項：共有人出賣其應有部分時，他共有人得以同一價格共同或單獨優先承購。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"丙原為A地共有人，甲移轉應有部分予丙，未引進外部第三人。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：丙非外部第三人，優先承買要件不具備。\n法律效果：乙不得主張優先承買權。","style":"Normal"},{"text":"（二）甲、乙多數決出售A地","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"土地法第34條之1第1項：共有人過半數及其應有部分合計過半數者，得處分共有土地。第2項：處分前應以書面通知他共有人。第3項：應對少數共有人償付其應得對價，不能受領或拒絕受領時得提存。第4項：出賣共有人之應有部分時，他共有人得優先承購。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲、乙占三人中二人，持分合計三分之二；戊為外部第三人，丙未同意。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲、乙在人數及應有部分均已過半，符合第1項的多數決門檻；並應依第2項通知丙，依第3項償付或提存丙應得之對價。\n法律效果：完成法定程序後，甲、乙得出賣A地全部；丙得以同一價格及條件，優先承買甲、乙合計三分之二的應有部分。","style":"Normal"}],"concepts":["特別規定：土地法第34條之1是民法第819條第2項全體同意原則的例外。","承買範圍：丙已有三分之一，不必購買自己的部分；其承買標的是甲、乙的三分之二。"],"law":"法條依據：土地法第34條之1第1項、第2項、第4項；民法第819條第2項。"},{"title":"第三題｜多數共有人出賣共有土地全部","shortTitle":"多數共有人出賣共有土地全部","prompt":["甲乙丙分別共有A地，應有部分各三分之一，試問： 若甲乙將A地出賣與丁並將A地所有權移轉於丁，則該買賣契約與物權移轉行為效力如何?"],"answers":[{"text":"（一）買賣契約","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第348條第1項：出賣人負有交付標的物並使買受人取得所有權之義務。買賣契約屬負擔行為，原則上不以出賣人具有處分權為生效要件。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲、乙雖僅有三分之二應有部分，仍與丁約定出售A地全部。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲、乙與丁就A地全部成立買賣的意思表示一致。\n法律效果：買賣契約有效；即使甲、乙未能使丁取得A地全部所有權，也只是能否履行及債務不履行責任問題，不使買賣契約當然無效。","style":"Normal"},{"text":"（二）所有權移轉","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第819條第2項：共有物之處分，原則上應得共有人全體同意。土地法第34條之1第1項則為其特別規定，符合人數及應有部分門檻的多數共有人，得處分共有土地全部。民法第758條：不動產物權移轉，應以書面為之並經登記，始生效力。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲、乙占三人中二人，應有部分合計三分之二。若其已依法書面通知丙、償付或提存丙應得之對價，並以書面完成物權合意及移轉登記，即符合規定。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲、乙在人數及應有部分均已過半，且完成通知、對價償付或提存、書面及登記等法定程序。\n法律效果：A地所有權移轉有效，丁取得A地所有權；如未符合土地法第34條之1的要件或程序，則不得僅憑多數決使丁取得丙的應有部分。","style":"Normal"}],"concepts":["負擔行為：只發生給付義務，不直接移轉既有權利，因此原則上不以處分權為必要。","不動產物權行為：須有物權意思表示、書面、處分權及登記。土地法第34條之1使符合門檻的多數共有人取得處分共有土地全部的法定權限。","少數共有人保障：丙得依土地法第34條之1第4項，以同一價格及條件優先承買甲、乙的應有部分。"],"law":"法條依據：土地法第34條之1第1項至第4項；民法第348條、第758條、第819條。"},{"title":"第四題｜設定抵押權與部分共有人自行分割","shortTitle":"設定抵押權與部分共有人自行分割","prompt":["甲乙丙分別共有A地，應有部分各三分之一，試問：","(一)若甲乙以A地為丁設定抵押權，則該抵押權設定行為效力如何?"," (二)若甲乙自行為共有物之分割，則該分割之效力如何?"],"answers":[{"text":"（一）以A地全部設定抵押權","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第819條第2項：共有物之處分、變更及設定負擔，應得共有人全體同意。土地法第34條之1第1項雖容許多數共有人處分共有土地，但其列舉範圍不包括設定抵押權。民法第118條第1項：無權利人就權利標的物所為的處分，經有權利人承認始生效力。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲、乙未經丙同意，即以A地全部為丁設定抵押權；甲、乙只能處分自己的應有部分，無權處分丙的應有部分。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：未經丙同意，欠缺第819條第2項所要求的全體同意；土地法第34條之1亦不能作為多數決設定抵押權的依據。\n法律效果：就丙應有部分屬無權處分，效力未定，須經丙承認始生效力；丙拒絕承認時，對丙不生效力。如已就丙的權利範圍完成登記，丙得請求塗銷。至於能否僅在甲、乙的應有部分成立抵押權，應依當事人的設定意思及行為可否分割判斷。","style":"Normal"},{"text":"（二）甲、乙自行分割","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第824條第1項：共有物之分割，依共有人協議之方法行之；協議分割須由全體共有人共同決定。A地為不動產時，完成物權分割尚須依民法第758條以書面為之並辦理登記。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲、乙未經丙同意，自行分割A地。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲、乙未經丙同意，欠缺全體共有人共同參與及同意的要件。\n法律效果：甲、乙間的約定不能使A地發生分割效力，也不得拘束丙；如全體無法達成協議，任何共有人均得訴請法院裁判分割。","style":"Normal"}],"concepts":["設定抵押權：使所有權受限制，屬物權處分行為。","分割的兩階段：分割協議是負擔行為；辦理交付或登記的協議分割是處分行為。"],"law":"法條依據：土地法第34條之1；民法第118條、第758條、第767條、第819條、第823條、第824條。"},{"title":"第五題｜全體共有人協議分割土地","shortTitle":"全體共有人協議分割土地","prompt":["甲、乙、丙三人共有A地，應有部分各三分之一，若甲、乙、丙三人欲透過協議分割系爭A地，試問其應如何為之？"],"answers":[{"text":"（一）訂立分割協議","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第824條第1項：共有物之分割，依共有人協議之方法行之。協議分割須由全體共有人共同決定分割方法。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲、乙、丙均同意分割A地。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲、乙、丙全體均同意分割方法，符合協議成立要件。\n法律效果：分割協議成立，三人互負依約完成分割的義務；任一方不履行時，他方得請求履行。","style":"Normal"},{"text":"（二）完成協議分割","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第758條：依法律行為發生不動產物權變動者，應以書面為之並經登記，始生效力。民法第824條之1第1項：共有人自分割之效力發生時起，取得分得部分之所有權。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"A地為不動產，三人除成立分割協議外，尚須以書面完成分割的物權合意，並辦理分割登記。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：全體共有人已協議分割，並以書面完成物權合意及分割登記。\n法律效果：登記時發生協議分割的物權效力，共有關係消滅，各自取得分得土地的所有權。","style":"Normal"}],"concepts":["先協議、後登記：分割協議只產生履行義務；登記後才完成不動產協議分割。"],"law":"法條依據：民法第758條、第824條第1項、第824條之1第1項。"},{"title":"第六題｜分割協議與十五年消滅時效","shortTitle":"分割協議與十五年消滅時效","prompt":["甲、乙、丙三人共有A地，應有部分各三分之一。若三人已於民國80年簽訂分割協議，試問於民國96年時甲應為如何之主張？"],"answers":[{"text":"（一）請求履行分割協議","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第125條：一般請求權自可行使時起，因十五年間不行使而消滅。民法第144條第1項：時效完成後，債務人得拒絕給付。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"分割協議簽於民國80年。若自簽約時甲即可請求辦理分割登記，至民國96年已逾十五年，且題目未見時效中斷或不完成事由。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：如履行請求權自民國80年即可行使，至民國96年已逾十五年，符合消滅時效完成要件。\n法律效果：甲仍得請求乙、丙依分割協議辦理登記，但乙、丙得依第144條提出時效抗辯而拒絕履行；若約定較晚的履行期或有時效中斷事由，則應另行計算。","style":"Normal"},{"text":"（二）改請求裁判分割","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第823條第1項所定共有物分割請求權，屬形成權，原則上不因消滅時效而消滅。依民國96年當時實務見解，分割協議的履行請求權時效完成並經共有人拒絕履行後，仍得請求法院裁判分割；此見解其後明定於民法第824條第2項。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"如乙、丙提出時效抗辯而拒絕履行原分割協議，A地的共有關係仍未消滅，且已不能依該協議完成分割。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：共有關係仍存在，且原分割協議已因時效抗辯而無法履行。\n法律效果：甲得另行訴請法院裁判分割，不受原履行請求權消滅時效完成的影響。","style":"Normal"}],"concepts":["時效效果：消滅時效完成不使請求權自動消滅；債務人取得拒絕履行的抗辯權。","時間法提示：民國98年修法將既有實務見解明文化；本題在民國96年仍可依當時實務處理。"],"law":"法條依據：民法第125條、第144條、第823條、第824條。"},{"title":"第七題｜公同共有物遭第三人無權占有","shortTitle":"公同共有物遭第三人無權占有","prompt":["甲、乙、丙公同共有A地，A地為丁所無權占有，試問甲得否請求丁返還A地之占有？"],"answers":[{"text":"甲得否請求丁返還占有","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第767條第1項：所有人得向無權占有人請求返還所有物。民法第828條第2項準用第821條，故公同共有人得單獨為全體公同共有人之利益，請求第三人返還共有物。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"丁無權占有甲、乙、丙公同共有的A地；甲為公同共有人。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：丁無權占有A地，甲為A地的公同共有人。\n法律效果：甲得單獨起訴請求丁返還A地，但返還對象須為甲、乙、丙全體公同共有人，不得僅請求返還給甲個人。","style":"Normal"}],"concepts":["公同共有：各公同共有人並無可自由處分的應有部分，而是基於公同關係共同享有權利。","單獨起訴：現行民法第828條第2項已有明文準用第821條，修法前的爭議已獲解決。"],"law":"法條依據：民法第767條第1項、第821條、第828條第2項。"},{"title":"第八題｜買賣不破租賃","shortTitle":"買賣不破租賃","prompt":["甲將A屋出租與乙，並將A屋交付乙占有，嗣後甲將A屋所有權移轉與丙，丙得否對乙請求返還A屋之占有？"],"answers":[{"text":"（一）原則","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第425條第1項：出租人於租賃物交付後，承租人仍占有中，縱將所有權讓與第三人，租賃契約對受讓人仍繼續存在；此即買賣不破租賃。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"甲出租並交付A屋予乙，嗣後移轉予丙；乙仍占有A屋。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：甲已將A屋交付乙，乙於所有權移轉時仍占有A屋，符合第425條第1項要件。\n法律效果：丙依法承受出租人地位，租約對丙繼續存在；乙屬有權占有，丙不得請求返還A屋。","style":"Normal"},{"text":"（二）例外","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第425條第2項：未經公證之不動產租賃契約，其期限逾五年或未定期限者，不適用前項規定。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"題目並未記載租約同時具備「未經公證」及「期限逾五年或未定期限」等例外事實。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：依題示事實，無從認定符合第425條第2項的例外要件。\n法律效果：仍應適用買賣不破租賃，丙不得請求乙返還；僅在能證明租約未經公證，且期限逾五年或未定期限時，始不適用第1項。","style":"Normal"}],"concepts":["法定契約承擔：民法第425條使受讓人依法承受出租人地位，是契約相對性原則的例外。","不動產移轉：題目稱所有權已移轉，即以民法第758條所要求的書面與登記均已完成為前提。"],"law":"法條依據：民法第425條、第758條、第767條第1項。"},{"title":"第九題｜共有土地之使用收益與返還請求","shortTitle":"共有土地之使用收益與返還請求","prompt":["甲有A地一筆，其老友乙中年失業後，因轉職不易而窮困潦倒，甲心中不忍，故與乙就該A地右半部之特定範圍成立使用借貸契約，使乙得無償使用該範圍之土地以謀生。 乙甚有生意頭腦，將該範圍之土地畫線後裝設入口柵欄經營停車場業務，獲利頗豐。嗣後甲自己有資金需求，故將該A地出賣並移轉與丙、丁兩人，並由其各取得二分之一之應有部分。 丙取得該A地之持分後，見乙經營之停車場生意興隆，心想：「既然我已經取得A地二分之一之應有部分，已經是A地權利人，何不依樣畫葫蘆經營停車場？」因此丙在未經丁同意下，就該A地左半部之特定範圍亦開始經營停車場。 丁認為該筆土地均係乙、丙兩人在使用收益並不公平，因此遂分別請求乙、丙返還其所占有之部分予自己。試問丁之主張有無理由？"],"answers":[{"text":"（一）丁對乙之返還請求","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第767條第1項：所有人得向無權占有人請求返還所有物。民法第821條：各共有人得為全體共有人之利益，就共有物全部行使本於所有權的請求權，但回復共有物的請求，只能請求返還予全體共有人。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"乙雖依其與原所有人甲間的使用借貸契約占有右半部，但丁並非該契約當事人；使用借貸原則上僅具債權效力，不能據以對抗取得所有權的丁。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：乙的使用借貸關係原則上不能對抗丁，故乙對丁欠缺占有權源。\n法律效果：丁原請求乙返還右半部予自己，並無理由；但丁得依第767條及第821條，改為請求乙返還右半部予丙、丁全體。","style":"Normal"},{"text":"（二）使用借貸能否類推買賣不破租賃","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第425條第1項僅明定租賃物交付後的買賣不破租賃；使用借貸為無償契約，法律未設相同規定。是否類推適用，學說上有肯定說與否定說。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"乙為無償借用人，並非支付租金的承租人；使用借貸與租賃在有償性及利益衡量上有所不同。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：乙非承租人，不直接符合第425條第1項要件；依否定說，兩者規範目的及利益衡量亦不相同，不具法律漏洞。\n法律效果：乙不得類推適用第425條，不能以原使用借貸關係對抗丁。","style":"Normal"},{"text":"（三）丁對丙之返還請求","style":"Heading 3"},{"text":"1. 大前提（法律／原理原則）","style":"Normal"},{"text":"民法第818條：各共有人按其應有部分，對共有物全部有使用收益權，但不得侵害他共有人同等的使用收益權。民法第820條第1項：共有物的管理，原則上須有共有人過半數及其應有部分合計過半數的同意。另依民法第767條及第821條，共有人得為全體利益請求無權占有人返還共有物。","style":"Normal"},{"text":"2. 小前提（事實涵攝）","style":"Normal"},{"text":"丙僅有二分之一應有部分，未經丁同意，也無分管契約或合法管理決定，即排除丁而獨占A地左半部經營停車場。","style":"Normal"},{"text":"3. 結論（要件＋法律效果）","style":"Normal"},{"text":"要件：丙未取得得以排他使用左半部的分管約定或管理決定，其占有已妨害丁的同等使用收益權。\n法律效果：丁原請求丙返還左半部予自己，並無理由；但丁得改為請求丙返還左半部予丙、丁全體。","style":"Normal"}],"concepts":["1. 使用借貸與租賃不同：使用借貸是無償契約；租賃是有償契約。民法第425條只明定租賃物所有權移轉後，租約對受讓人繼續存在。使用借貸能否類推適用，仍有肯定說與否定說之爭。","2. 應有部分不是土地上的特定位置：丙取得二分之一應有部分，是對A地全部享有二分之一比例的權利，不代表丙取得左半部的單獨所有權。未經合法分管或管理決定，不得排除丁而獨占特定部分。","3. 丁得起訴，但不能要求返還給自己：丁雖得單獨行使共有物返還請求權，回復共有物仍須為全體共有人利益。故丁正確的請求方式，是要求乙、丙返還給丙、丁全體，而不是交由丁個人占有。","總結：乙與丙的占有原則上均欠缺對抗丁的合法權源，丁得分別請求返還；但丁只能請求返還給全體共有人。因此，丁要求返還給自己的主張並無理由，改為返還給丙、丁全體後始有理由。"],"law":"法條依據：民法第148條、第425條、第464條、第767條第1項、第818條、第820條及第821條。"}];
+    const picker=document.getElementById('picker');
+    const answer=document.getElementById('answer');
+    const wrongKey='law-quiz-wrong-v1';
+    let wrongs=new Set(JSON.parse(localStorage.getItem(wrongKey)||'[]'));
+    let current=0,wrongMode=false;
+
+    const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    const lawPattern=/((?:民法|土地法)?第\d+條(?:之\d+)?(?:第\d+項)?(?:第\d+款)?(?:前段|中段|後段)?|第\d+項)/g;
+    const legal=value=>escapeHtml(value).replace(lawPattern,'<strong class="law-ref">$1</strong>');
+    const activePool=()=>wrongMode?[...wrongs].sort((a,b)=>a-b):QUESTIONS.map((_,i)=>i);
+
+    QUESTIONS.forEach((q,i)=>{
+      const option=document.createElement('option');
+      option.value=i;option.textContent=`第 ${i+1} 題｜${q.shortTitle}`;
+      picker.appendChild(option);
+    });
+
+    function saveWrongs(){localStorage.setItem(wrongKey,JSON.stringify([...wrongs]));}
+    function hideAnswer(){answer.classList.remove('open');document.getElementById('toggle').textContent='顯示答案';document.getElementById('toggle').setAttribute('aria-expanded','false');}
+    function render(index){
+      current=index;const q=QUESTIONS[index];picker.value=index;hideAnswer();
+      document.getElementById('number').textContent=`第 ${index+1} 題`;
+      document.getElementById('title').textContent=q.shortTitle;
+      document.getElementById('prompt').textContent=q.prompt.join('\n');
+      document.getElementById('answerBody').innerHTML=q.answers.map(item=>{
+        const isHeading=item.style==='Heading 3';
+        const isStep=/^[123]\. /.test(item.text);
+        return `<p class="answer-line${isHeading?' heading':''}${isStep?' step':''}">${legal(item.text)}</p>`;
+      }).join('');
+      document.getElementById('conceptBody').innerHTML=q.concepts.map(text=>`<p class="concept">${escapeHtml(text)}</p>`).join('');
+      document.getElementById('law').innerHTML=legal(q.law);
+      document.getElementById('conceptSection').hidden=!q.concepts.length&&!q.law;
+      const marked=wrongs.has(index),mark=document.getElementById('markWrong');
+      mark.textContent=marked?'移出錯題':'加入錯題';mark.classList.toggle('marked',marked);
+      const pool=activePool(),at=pool.indexOf(index);
+      document.getElementById('prev').disabled=at<=0;
+      document.getElementById('next').disabled=at<0||at>=pool.length-1;
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    picker.onchange=event=>{wrongMode=false;updateMode();render(Number(event.target.value));};
+    document.getElementById('toggle').onclick=()=>{
+      const open=answer.classList.toggle('open');
+      document.getElementById('toggle').textContent=open?'隱藏答案':'顯示答案';
+      document.getElementById('toggle').setAttribute('aria-expanded',String(open));
+      if(open)answer.scrollIntoView({block:'start'});
+    };
+    document.getElementById('markWrong').onclick=()=>{
+      wrongs.has(current)?wrongs.delete(current):wrongs.add(current);saveWrongs();
+      if(wrongMode&&!wrongs.size){wrongMode=false;updateMode();}
+      render(current);
+    };
+    document.getElementById('random').onclick=()=>{
+      const pool=activePool();
+      if(!pool.length){alert('目前沒有錯題。');return;}
+      const choices=pool.length>1?pool.filter(i=>i!==current):pool;
+      render(choices[Math.floor(Math.random()*choices.length)]);
+    };
+    document.getElementById('wrongMode').onclick=()=>{
+      if(!wrongs.size){alert('請先把題目加入錯題。');return;}
+      wrongMode=!wrongMode;updateMode();render(wrongMode?[...wrongs][0]:current);
+    };
+    function updateMode(){
+      const button=document.getElementById('wrongMode');
+      button.classList.toggle('marked',wrongMode);button.textContent=wrongMode?'結束重練':'錯題重練';
+      document.getElementById('modeNote').textContent=wrongMode?'錯題重練模式':'一般練習';
+    }
+    document.getElementById('prev').onclick=()=>{const pool=activePool(),at=pool.indexOf(current);if(at>0)render(pool[at-1]);};
+    document.getElementById('next').onclick=()=>{const pool=activePool(),at=pool.indexOf(current);if(at<pool.length-1)render(pool[at+1]);};
+    updateMode();render(0);
   </script>
-</body></html>
+</body>
+</html>
