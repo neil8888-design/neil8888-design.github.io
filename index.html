@@ -32,6 +32,7 @@
     .answer-line{margin:0 0 12px;white-space:pre-wrap}
     .answer-line.heading{font-weight:900;color:var(--accent);margin-top:20px;border-bottom:2px solid var(--paper);padding-bottom:5px}
     .answer-line.step{font-weight:900;margin-bottom:4px}
+    .answer-line.lawtext{color:var(--accent);font-weight:900}
     .law-ref{color:var(--accent);font-weight:900}
     .concepts{margin-top:22px;padding-top:18px;border-top:2px solid var(--paper)}
     .concept{margin:0 0 10px;white-space:pre-wrap}
@@ -102,10 +103,11 @@
       document.getElementById('number').textContent=`第 ${index+1} 題`;
       document.getElementById('title').textContent=q.shortTitle;
       document.getElementById('prompt').textContent=q.prompt.join('\n');
-      document.getElementById('answerBody').innerHTML=q.answers.map(item=>{
+      document.getElementById('answerBody').innerHTML=q.answers.map((item,index)=>{
         const isHeading=item.style==='Heading 3';
         const isStep=/^[123]\. /.test(item.text);
-        return `<p class="answer-line${isHeading?' heading':''}${isStep?' step':''}">${legal(item.text)}</p>`;
+        const isLawText=index>0&&/^1\. 大前提/.test(q.answers[index-1].text);
+        return `<p class="answer-line${isHeading?' heading':''}${isStep?' step':''}${isLawText?' lawtext':''}">${legal(item.text)}</p>`;
       }).join('');
       document.getElementById('conceptBody').innerHTML=q.concepts.map(text=>`<p class="concept">${escapeHtml(text)}</p>`).join('');
       document.getElementById('law').innerHTML=legal(q.law);
