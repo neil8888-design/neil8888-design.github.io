@@ -15,7 +15,7 @@
     button{cursor:pointer}
     header{position:sticky;top:0;z-index:10;background:var(--ink);color:var(--white);padding:max(12px,env(safe-area-inset-top)) 16px 12px}
     .head{max-width:760px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    h1{font-size:1.1rem;margin:0}.tag{color:var(--accent);font-weight:900;font-size:.85rem}
+    h1{font-size:1.1rem;margin:0}.tag{color:var(--accent);font-weight:900;font-size:.85rem;text-decoration:none;border:1px solid var(--accent);border-radius:10px;padding:5px 10px;white-space:nowrap}
     .wrap{max-width:760px;margin:auto;padding:18px 14px calc(38px + env(safe-area-inset-bottom))}
     .tools{display:grid;grid-template-columns:1fr auto auto;gap:8px;margin-bottom:14px}
     select,.btn{min-height:46px;border:2px solid var(--ink);border-radius:12px;background:var(--white);padding:9px 12px;font-weight:800}
@@ -41,12 +41,12 @@
     .nav{display:grid;grid-template-columns:1fr 1fr;gap:8px}
     .note{text-align:center;font-size:.82rem;font-weight:700;margin:12px 0 0}
     [hidden]{display:none!important}
-    @media(max-width:560px){.tools{grid-template-columns:1fr 1fr}.tools select{grid-column:1/-1}.card{padding:18px 16px}.actions{grid-template-columns:1fr}.head .tag{display:none}}
+    @media(max-width:560px){.tools{grid-template-columns:1fr 1fr}.tools select{grid-column:1/-1}.card{padding:18px 16px}.actions{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
-  <header><div class="head"><h1>企業民刑法專題｜九題刷題</h1><span class="tag">手機版</span></div></header>
+  <header><div class="head"><h1>企業民刑法專題｜九題刷題</h1><a class="tag" href="laws.html">法條參考</a></div></header>
   <main class="wrap">
     <section class="tools" aria-label="出題工具">
       <select id="picker" aria-label="選擇題目"></select>
